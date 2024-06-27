@@ -10,6 +10,9 @@ def squares(n):
         result.append(i * i)
     return result
 
+print("Squares from 1 to 5:", squares(5))
+
+
 # Task 2
 # Implement a function that has 3 parameters representing a list and 2 indices that will reverse a sublist within the list from index i to j (inclusive).
 
@@ -24,6 +27,9 @@ def reverse_sublist(lst, i, j):
         j -= 1
     
     return lst
+
+print("Reversing sublist from index 2 to 4:", reverse_sublist([1, 2, 3, 4, 5, 6], 2, 4))
+
 
 # Task 3
 # Implement a function to merge two sorted lists into a single sorted list without using the built-in sorted function of list.sort method. 
@@ -52,7 +58,7 @@ def merge_lists(list1, list2):
     
     return merged
 
-
+print("Merging [1, 3, 5] and [2, 4, 6]:", merge_lists([1, 3, 5], [2, 4, 6]))
 
 
 # Dictionary Manipulation and Optimization
@@ -70,6 +76,10 @@ def merge_dictionaries(dict1, dict2):
         merged[key] = dict2[key] 
     
     return merged
+
+dict_1 = {"a": 1, "b": 2, "c": 3}
+dict_2 = {"b": 4, "c": 5, "d": 6}
+print("Merging dictionaries:", merge_dictionaries(dict_1, dict_2))
 
 
 # Task 2
@@ -92,6 +102,8 @@ def diff_dict(dict1, dict2):
     
     return difference
 
+print("Difference of dictionaries:", diff_dict(dict_1, dict_2))
+
 
 # Task 3
 # Implement a function to count the frequency of each unique word in a list using a dictionary. *Bonus* Ignore case 
@@ -109,3 +121,5 @@ def count_word_frequency(words):
     
     return frequency
 
+fruit = ["apple", "banana", "Apple", "apple", "banana", "cherry"]
+print("Word frequency:", count_word_frequency(fruit))
